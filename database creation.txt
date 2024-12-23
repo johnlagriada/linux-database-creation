@@ -1,0 +1,329 @@
+┌──(finnapple㉿kali)-[~]
+└─$ sudo apt install apache2
+[sudo] password for finnapple: 
+Upgrading:                      
+  apache2  apache2-bin  apache2-data  apache2-utils
+
+Summary:
+  Upgrading: 4, Installing: 0, Removing: 0, Not Upgrading: 2112
+  Download size: 1982 kB
+  Space needed: 27.6 kB / 8841 MB available
+
+Continue? [Y/n] y
+Get:1 http://kali.download/kali kali-rolling/main amd64 apache2 amd64 2.4.62-3 [217 kB]
+Get:2 http://kali.download/kali kali-rolling/main amd64 apache2-bin amd64 2.4.62-3 [1394 kB]
+Get:3 http://kali.download/kali kali-rolling/main amd64 apache2-data all 2.4.62-3 [160 kB]
+Get:4 http://kali.download/kali kali-rolling/main amd64 apache2-utils amd64 2.4.62-3 [211 kB]
+Fetched 1982 kB in 1s (1717 kB/s)       
+(Reading database ... 433692 files and directories currently installed.)
+Preparing to unpack .../apache2_2.4.62-3_amd64.deb ...
+Unpacking apache2 (2.4.62-3) over (2.4.62-1) ...
+Preparing to unpack .../apache2-bin_2.4.62-3_amd64.deb ...
+Unpacking apache2-bin (2.4.62-3) over (2.4.62-1) ...
+Preparing to unpack .../apache2-data_2.4.62-3_all.deb ...
+Unpacking apache2-data (2.4.62-3) over (2.4.62-1) ...
+Preparing to unpack .../apache2-utils_2.4.62-3_amd64.deb ...
+Unpacking apache2-utils (2.4.62-3) over (2.4.62-1) ...
+Setting up apache2-bin (2.4.62-3) ...
+Setting up apache2-data (2.4.62-3) ...
+Setting up apache2-utils (2.4.62-3) ...
+Setting up apache2 (2.4.62-3) ...
+apache2.service is a disabled or a static unit not running, not starting it.
+apache-htcacheclean.service is a disabled or a static unit not running, not star
+ting it.
+Processing triggers for kali-menu (2024.3.1) ...
+Processing triggers for man-db (2.12.1-2) ...
+                                                                                
+┌──(finnapple㉿kali)-[~]
+└─$ sudo systemctl start apache2
+                                                                                
+┌──(finnapple㉿kali)-[~]
+└─$ sudo mysql -u root -p       
+Enter password: 
+ERROR 2002 (HY000): Can't connect to local server through socket '/run/mysqld/mysqld.sock' (2)
+                                                                                
+┌──(finnapple㉿kali)-[~]
+└─$ sudo apt install mysql-server
+Package mysql-server is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+Error: Package 'mysql-server' has no installation candidate
+                                                                       
+┌──(finnapple㉿kali)-[~]
+└─$ sudo apt update              
+Hit:1 http://http.kali.org/kali kali-rolling InRelease
+2112 packages can be upgraded. Run 'apt list --upgradable' to see them.
+                                                                       
+┌──(finnapple㉿kali)-[~]
+└─$ sudo apt install mysql-server
+Package mysql-server is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+Error: Package 'mysql-server' has no installation candidate
+                                                                       
+┌──(finnapple㉿kali)-[~]
+└─$ sudo apt install mariadb-server
+Upgrading:                      
+  libmariadb3                    mariadb-plugin-provider-lzma
+  mariadb-client                 mariadb-plugin-provider-lzo
+  mariadb-client-core            mariadb-plugin-provider-snappy
+  mariadb-common                 mariadb-server
+  mariadb-plugin-provider-bzip2  mariadb-server-compat
+  mariadb-plugin-provider-lz4    mariadb-server-core
+
+Summary:
+  Upgrading: 12, Installing: 0, Removing: 0, Not Upgrading: 2100
+  Download size: 15.3 MB
+  Space needed: 1211 kB / 8836 MB available
+
+Continue? [Y/n] y
+Get:2 http://kali.download/kali kali-rolling/main amd64 mariadb-server-compat all 1:11.4.3-1 [26.1 kB]
+Get:4 http://kali.download/kali kali-rolling/main amd64 mariadb-server-core amd64 1:11.4.3-1 [7517 kB]
+Get:1 http://mirror.twds.com.tw/kali kali-rolling/main amd64 mariadb-common all 1:11.4.3-1 [27.1 kB]
+Get:3 http://kali.cs.nycu.edu.tw/kali kali-rolling/main amd64 mariadb-server amd64 1:11.4.3-1 [3550 kB]
+Get:5 http://kali.download/kali kali-rolling/main amd64 mariadb-client-core amd64 1:11.4.3-1 [891 kB]
+Get:6 http://kali.download/kali kali-rolling/main amd64 mariadb-client amd64 1:11.4.3-1 [2997 kB]
+Get:7 http://kali.download/kali kali-rolling/main amd64 libmariadb3 amd64 1:11.4.3-1 [181 kB]
+Get:11 http://kali.download/kali kali-rolling/main amd64 mariadb-plugin-provider-lzo amd64 1:11.4.3-1 [27.5 kB]
+Get:12 http://kali.download/kali kali-rolling/main amd64 mariadb-plugin-provider-snappy amd64 1:11.4.3-1 [27.5 kB]
+Get:8 http://kali.cs.nycu.edu.tw/kali kali-rolling/main amd64 mariadb-plugin-provider-bzip2 amd64 1:11.4.3-1 [27.6 kB]
+Get:9 http://kali.cs.nycu.edu.tw/kali kali-rolling/main amd64 mariadb-plugin-provider-lz4 amd64 1:11.4.3-1 [27.5 kB]
+Get:10 http://free.nchc.org.tw/kali kali-rolling/main amd64 mariadb-plugin-provider-lzma amd64 1:11.4.3-1 [27.5 kB]
+Fetched 15.3 MB in 15s (1056 kB/s)                       
+Preconfiguring packages ...
+(Reading database ... 433692 files and directories currently installed.
+)
+Preparing to unpack .../mariadb-common_1%3a11.4.3-1_all.deb ...
+Unpacking mariadb-common (1:11.4.3-1) over (1:11.4.2-4) ...
+Preparing to unpack .../mariadb-server-compat_1%3a11.4.3-1_all.deb ...
+Unpacking mariadb-server-compat (1:11.4.3-1) over (1:11.4.2-4) ...
+Setting up mariadb-common (1:11.4.3-1) ...
+(Reading database ... 433692 files and directories currently installed.
+)
+Preparing to unpack .../0-mariadb-server_1%3a11.4.3-1_amd64.deb ...
+/var/lib/mysql: found previous version 11.4
+Unpacking mariadb-server (1:11.4.3-1) over (1:11.4.2-4) ...
+Preparing to unpack .../1-mariadb-server-core_1%3a11.4.3-1_amd64.deb ..
+.
+Unpacking mariadb-server-core (1:11.4.3-1) over (1:11.4.2-4) ...
+Preparing to unpack .../2-mariadb-client-core_1%3a11.4.3-1_amd64.deb ..
+.
+Unpacking mariadb-client-core (1:11.4.3-1) over (1:11.4.2-4) ...
+Preparing to unpack .../3-mariadb-client_1%3a11.4.3-1_amd64.deb ...
+Unpacking mariadb-client (1:11.4.3-1) over (1:11.4.2-4) ...
+Preparing to unpack .../4-libmariadb3_1%3a11.4.3-1_amd64.deb ...
+Unpacking libmariadb3:amd64 (1:11.4.3-1) over (1:11.4.2-4) ...
+Preparing to unpack .../5-mariadb-plugin-provider-bzip2_1%3a11.4.3-1_am
+d64.deb ...
+Unpacking mariadb-plugin-provider-bzip2 (1:11.4.3-1) over (1:11.4.2-4) 
+...
+Preparing to unpack .../6-mariadb-plugin-provider-lz4_1%3a11.4.3-1_amd6
+4.deb ...
+Unpacking mariadb-plugin-provider-lz4 (1:11.4.3-1) over (1:11.4.2-4) ..
+.
+Preparing to unpack .../7-mariadb-plugin-provider-lzma_1%3a11.4.3-1_amd
+64.deb ...
+Unpacking mariadb-plugin-provider-lzma (1:11.4.3-1) over (1:11.4.2-4) .
+..
+Preparing to unpack .../8-mariadb-plugin-provider-lzo_1%3a11.4.3-1_amd6
+4.deb ...
+Unpacking mariadb-plugin-provider-lzo (1:11.4.3-1) over (1:11.4.2-4) ..
+.
+Preparing to unpack .../9-mariadb-plugin-provider-snappy_1%3a11.4.3-1_a
+md64.deb ...
+Unpacking mariadb-plugin-provider-snappy (1:11.4.3-1) over (1:11.4.2-4)
+ ...
+Setting up libmariadb3:amd64 (1:11.4.3-1) ...
+Setting up mariadb-server-core (1:11.4.3-1) ...
+Setting up mariadb-client-core (1:11.4.3-1) ...
+Setting up mariadb-client (1:11.4.3-1) ...
+Setting up mariadb-server (1:11.4.3-1) ...
+Installing new version of config file /etc/init.d/mariadb ...
+mariadb.service is a disabled or a static unit not running, not startin
+g it.
+Setting up mariadb-plugin-provider-bzip2 (1:11.4.3-1) ...
+Setting up mariadb-plugin-provider-lzma (1:11.4.3-1) ...
+Setting up mariadb-plugin-provider-lzo (1:11.4.3-1) ...
+Setting up mariadb-plugin-provider-lz4 (1:11.4.3-1) ...
+Setting up mariadb-server-compat (1:11.4.3-1) ...
+Setting up mariadb-plugin-provider-snappy (1:11.4.3-1) ...
+Processing triggers for man-db (2.12.1-2) ...
+Processing triggers for kali-menu (2024.3.1) ...
+Processing triggers for libc-bin (2.38-13) ...
+                                                                       
+┌──(finnapple㉿kali)-[~]
+└─$ sudo mysql -u root             
+ERROR 2002 (HY000): Can't connect to local server through socket '/run/mysqld/mysqld.sock' (2)
+                                                                       
+┌──(finnapple㉿kali)-[~]
+└─$ ALTER USER 'root'@'localhost' IDENTIFIED BY '';
+ALTER: command not found
+                                                                       
+┌──(finnapple㉿kali)-[~]
+└─$ mysql --version
+mysql from 11.4.3-MariaDB, client 15.2 for debian-linux-gnu (x86_64) using  EditLine wrapper
+                                                                       
+┌──(finnapple㉿kali)-[~]
+└─$ sudo systemctl start mariadb
+                                                                       
+┌──(finnapple㉿kali)-[~]
+└─$ sudo systemctl enable mariadb
+Synchronizing state of mariadb.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable mariadb
+Created symlink '/etc/systemd/system/multi-user.target.wants/mariadb.service' → '/usr/lib/systemd/system/mariadb.service'.
+                                                                       
+┌──(finnapple㉿kali)-[~]
+└─$ sudo mysql -u root -p                          
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 31
+Server version: 11.4.3-MariaDB-1 Debian n/a
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Support MariaDB developers by giving a star at https://github.com/MariaDB/server
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE DATABASE contact_management;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> 
+MariaDB [(none)]> USE contact_management;
+Database changed
+MariaDB [contact_management]> 
+MariaDB [contact_management]> CREATE TABLE users (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,      
+    ->     username VARCHAR(255) NOT NULL UNIQUE,   
+    ->     email VARCHAR(255) NOT NULL UNIQUE,      
+    ->     password VARCHAR(255) NOT NULL,          
+    ->     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  
+    ->     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP  
+    -> );
+
+Query OK, 0 rows affected (1.205 sec)
+
+MariaDB [contact_management]> 
+MariaDB [contact_management]> CREATE TABLE contacts (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     name VARCHAR(255) NOT NULL,
+    ->     phone VARCHAR(20) NOT NULL,
+    ->     email VARCHAR(255) NOT NULL,
+    ->     address VARCHAR(255),
+    ->     birthday DATE,                     
+    ->     tags VARCHAR(255),                  
+    ->     zip_code VARCHAR(20),               
+    ->     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ->     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    -> );
+Query OK, 0 rows affected (0.011 sec)
+
+MariaDB [contact_management]> 
+MariaDB [contact_management]> 
+MariaDB [contact_management]> CREATE TABLE password_resets (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,  
+    ->     user_id INT NOT NULL,               
+    ->     reset_token VARCHAR(64) NOT NULL,
+    ->     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ->     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE 
+    -> );
+Query OK, 0 rows affected (0.013 sec)
+
+MariaDB [contact_management]> 
+MariaDB [contact_management]> SHOW TABLES
+    -> SHOW TABLE
+    -> SHOW TABLE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SHOW TABLE
+SHOW TABLE' at line 2
+MariaDB [contact_management]> SHOW TABLES;
++------------------------------+
+| Tables_in_contact_management |
++------------------------------+
+| contacts                     |
+| password_resets              |
+| users                        |
++------------------------------+
+3 rows in set (0.000 sec)
+
+MariaDB [contact_management]> CLEAR
+MariaDB [contact_management]> clear
+MariaDB [contact_management]> SELECT * FROM users;
+Empty set (0.001 sec)
+
+MariaDB [contact_management]> INSERT INTO contacts (name, phone, email, address, birthday, tags, zip_code) 
+    -> VALUES 
+    -> ('John Wick', '123-456-7890', 'john.doe@example.com', '123 Elm Street, Some City', '1990-01-15', 'Friend,Work', '12345'),
+    -> ('Jane Smith', '987-654-3210', 'jane.smith@example.com', '456 Oak Avenue, Another City', '1985-02-20', 'Family', '67890'),
+    -> ('Bob Johnson', '555-555-5555', 'bob.johnson@example.com', '789 Pine Road, Some Town', '1992-03-25', 'Work', '23456'),
+    -> ('Alice Brown', '234-567-8901', 'alice.brown@example.com', '101 Maple Drive, Sample City', '1988-04-10', 'Friend', '34567'),
+    -> ('Charlie White', '345-678-9012', 'charlie.white@example.com', '202 Birch Lane, Example Town', '1991-05-05', 'Friend', '45678'),
+    -> ('David Lee', '456-789-0123', 'david.lee@example.com', '303 Cedar Street, Test City', '1987-06-18', 'Work', '56789'),
+    -> ('Eve Green', '567-890-1234', 'eve.green@example.com', '404 Pinehill Road, Demo Town', '1993-07-30', 'Family', '67891'),
+    -> ('Frank Black', '678-901-2345', 'frank.black@example.com', '505 Oakwood Avenue, Mytown', '1990-08-12', 'Work', '78901'),
+    -> ('Grace Yellow', '789-012-3456', 'grace.yellow@example.com', '606 Redwood Crescent, Hometown', '1989-09-25', 'Friend', '89012'),
+    -> ('Hank Purple', '890-123-4567', 'hank.purple@example.com', '707 Willow Park, Smallville', '1994-10-02', 'Work', '90123'),
+    -> ('Ivy Red', '901-234-5678', 'ivy.red@example.com', '808 Ash Street, Green City', '1995-11-13', 'Family', '23457'),
+    -> ('Jack Blue', '123-987-6543', 'jack.blue@example.com', '909 Cherry Road, Big City', '1984-12-29', 'Friend', '34568'),
+    -> ('Kelly Pink', '234-876-5432', 'kelly.pink@example.com', '1001 Oak Ridge, Cooltown', '1992-01-05', 'Work', '45679'),
+    -> ('Liam Grey', '345-765-4321', 'liam.grey@example.com', '1102 Pinewood Lane, Suburbia', '1986-02-22', 'Family', '56790'),
+    -> ('Mona White', '102-345-6789', 'mona.white@example.com', '1501 Sunset Boulevard, Ocean City', '1990-03-19', 'Friend', '67892'),
+    -> ('Nathan Black', '213-456-7890', 'nathan.black@example.com', '2202 Seaside Avenue, Bay Area', '1987-04-03', 'Work', '78902'),
+    -> ('Olivia Blue', '324-567-8901', 'olivia.blue@example.com', '3303 River Road, Clear Creek', '1994-05-14', 'Family', '89013'),
+    -> ('Paul Green', '435-678-9012', 'paul.green@example.com', '4404 Mountain Drive, Pine Valley', '1991-06-09', 'Work', '90124'),
+    -> ('Quincy Red', '546-789-0123', 'quincy.red@example.com', '5505 Valley Street, Hilltop', '1985-07-16', 'Friend', '23458'),
+    -> ('Rachel Yellow', '657-890-1234', 'rachel.yellow@example.com', '6606 Forest Road, Wildwood', '1992-08-27', 'Family', '34569'),
+    -> ('Sam Brown', '768-901-2345', 'sam.brown@example.com', '7707 Lakeview Drive, Crystal Shores', '1989-09-07', 'Work', '45680'),
+    -> ('Tina Purple', '879-012-3456', 'tina.purple@example.com', '8808 Spring Street, Riverdale', '1993-10-18', 'Friend', '56791'),
+    -> ('Ursula Pink', '980-123-4567', 'ursula.pink@example.com', '9909 Crescent Avenue, Westend', '1988-11-27', 'Family', '67893'),
+    -> ('Victor Grey', '111-234-5678', 'victor.grey@example.com', '1201 Highland Lane, Silverwood', '1990-12-22', 'Work', '78903'),
+    -> ('Wendy Black', '222-345-6789', 'wendy.black@example.com', '2302 Forest Path, Meadowbrook', '1995-01-10', 'Friend', '89014');
+Query OK, 25 rows affected (0.004 sec)
+Records: 25  Duplicates: 0  Warnings: 0
+
+MariaDB [contact_management]> SHOW TABLES;
++------------------------------+
+| Tables_in_contact_management |
++------------------------------+
+| contacts                     |
+| password_resets              |
+| users                        |
++------------------------------+
+3 rows in set (0.000 sec)
+
+MariaDB [contact_management]> SELECT * FROM users;
+Empty set (0.000 sec)
+
+MariaDB [contact_management]> SELECT * FROM contacts;
++----+---------------+--------------+---------------------------+-------------------------------------+------------+-------------+----------+---------------------+---------------------+
+| id | name          | phone        | email                     | address                             | birthday   | tags        | zip_code | created_at          | updated_at          |
++----+---------------+--------------+---------------------------+-------------------------------------+------------+-------------+----------+---------------------+---------------------+
+|  1 | John Wick     | 123-456-7890 | john.doe@example.com      | 123 Elm Street, Some City           | 1990-01-15 | Friend,Work | 12345    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+|  2 | Jane Smith    | 987-654-3210 | jane.smith@example.com    | 456 Oak Avenue, Another City        | 1985-02-20 | Family      | 67890    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+|  3 | Bob Johnson   | 555-555-5555 | bob.johnson@example.com   | 789 Pine Road, Some Town            | 1992-03-25 | Work        | 23456    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+|  4 | Alice Brown   | 234-567-8901 | alice.brown@example.com   | 101 Maple Drive, Sample City        | 1988-04-10 | Friend      | 34567    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+|  5 | Charlie White | 345-678-9012 | charlie.white@example.com | 202 Birch Lane, Example Town        | 1991-05-05 | Friend      | 45678    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+|  6 | David Lee     | 456-789-0123 | david.lee@example.com     | 303 Cedar Street, Test City         | 1987-06-18 | Work        | 56789    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+|  7 | Eve Green     | 567-890-1234 | eve.green@example.com     | 404 Pinehill Road, Demo Town        | 1993-07-30 | Family      | 67891    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+|  8 | Frank Black   | 678-901-2345 | frank.black@example.com   | 505 Oakwood Avenue, Mytown          | 1990-08-12 | Work        | 78901    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+|  9 | Grace Yellow  | 789-012-3456 | grace.yellow@example.com  | 606 Redwood Crescent, Hometown      | 1989-09-25 | Friend      | 89012    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 10 | Hank Purple   | 890-123-4567 | hank.purple@example.com   | 707 Willow Park, Smallville         | 1994-10-02 | Work        | 90123    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 11 | Ivy Red       | 901-234-5678 | ivy.red@example.com       | 808 Ash Street, Green City          | 1995-11-13 | Family      | 23457    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 12 | Jack Blue     | 123-987-6543 | jack.blue@example.com     | 909 Cherry Road, Big City           | 1984-12-29 | Friend      | 34568    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 13 | Kelly Pink    | 234-876-5432 | kelly.pink@example.com    | 1001 Oak Ridge, Cooltown            | 1992-01-05 | Work        | 45679    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 14 | Liam Grey     | 345-765-4321 | liam.grey@example.com     | 1102 Pinewood Lane, Suburbia        | 1986-02-22 | Family      | 56790    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 15 | Mona White    | 102-345-6789 | mona.white@example.com    | 1501 Sunset Boulevard, Ocean City   | 1990-03-19 | Friend      | 67892    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 16 | Nathan Black  | 213-456-7890 | nathan.black@example.com  | 2202 Seaside Avenue, Bay Area       | 1987-04-03 | Work        | 78902    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 17 | Olivia Blue   | 324-567-8901 | olivia.blue@example.com   | 3303 River Road, Clear Creek        | 1994-05-14 | Family      | 89013    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 18 | Paul Green    | 435-678-9012 | paul.green@example.com    | 4404 Mountain Drive, Pine Valley    | 1991-06-09 | Work        | 90124    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 19 | Quincy Red    | 546-789-0123 | quincy.red@example.com    | 5505 Valley Street, Hilltop         | 1985-07-16 | Friend      | 23458    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 20 | Rachel Yellow | 657-890-1234 | rachel.yellow@example.com | 6606 Forest Road, Wildwood          | 1992-08-27 | Family      | 34569    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 21 | Sam Brown     | 768-901-2345 | sam.brown@example.com     | 7707 Lakeview Drive, Crystal Shores | 1989-09-07 | Work        | 45680    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 22 | Tina Purple   | 879-012-3456 | tina.purple@example.com   | 8808 Spring Street, Riverdale       | 1993-10-18 | Friend      | 56791    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 23 | Ursula Pink   | 980-123-4567 | ursula.pink@example.com   | 9909 Crescent Avenue, Westend       | 1988-11-27 | Family      | 67893    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 24 | Victor Grey   | 111-234-5678 | victor.grey@example.com   | 1201 Highland Lane, Silverwood      | 1990-12-22 | Work        | 78903    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
+| 25 | Wendy Black   | 222-345-6789 | wendy.black@example.com   | 2302 Forest Path, Meadowbrook       | 1995-01-10 | Friend      | 89014    | 2024-12-23 08:48:52 | 2024-12-23 08:48:52 |
++----+---------------+--------------+---------------------------+-------------------------------------+------------+-------------+----------+---------------------+---------------------+
+25 rows in set (0.000 sec)
+
+MariaDB [contact_management]> 
